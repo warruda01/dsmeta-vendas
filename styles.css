@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/*linha acima. importado do google fonts. pesquisa a fonte, escolhe os pesos , 
+use o @import, copia e cola*/
+
+* { /* *significa que qualque referencia a fonte*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box; /*ver video para funcionamento*/
+    margin: 0; /*por padrao, a margem sera zero, interno e externo (padding)*/
+    padding: 0;
+} 
+body, html {
+    background-color: #000; /*cor de fundo*/
+    color: #FFFF;           /*cor da letra do titulo*/
+}
+
+a/*TAG a - @devsuperior*/, a:hover /*passa o mouse em cima*/, a:visited /*quando ja foi visitado*/
+{                                 
+    color:unset; /*sem formatacao inicial*/
+    text-decoration: none;
+}
+
+header{ /*cabecalho*/
+    background: linear-gradient(180deg, #102347 0%, #181818 100%); /*copiado do projeto e colado*/
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dsmeta-logo-container { /*como trata-se de uma classe, usa o ponto para estilizar*/
+    display: flex;
+    flex-direction: column; /*um em baixo do outro*/
+    align-items: center; /* alinha ao centro*/
+
+}
+
+.dsmeta-logo-container img{ /*referindo-se a TAG img q esta dentro dessa classe tera essas propriedade*/
+    width: 235px;
+    height: 106.07px;
+
+}
+
+.dsmeta-logo-container h1{ /*referindo-se ao titulo*/
+
+    margin-top: 15px; /*refere-se a distancia entre o logo e o titulo*/
+    font-size: 24px; 
+    font-weight: 700; /*peso da fonte*/
+}
+
+.dsmeta-logo-container p{
+
+    
+    font-size: 14px; 
+    font-weight: 300; /*peso da fonte*/
+}
+
+.dsmeta-card{
+    background-color: #283142; /*cor de fundo do card do ret*/
+    border-radius: 10px; /*arredondamento da borda*/
+    padding: 30px 10px; /*espacamento superior e lateral*/
+    
+}
+
+.dsmeta-sales-title{ /* titulo de Vendas*/
+    color: #676FFF; 
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dsmeta-form-control { /*formatacao das caixinhas de data*/
+    
+    width: 100%;
+    height: 46px;
+    background-color: #1B2531 ;
+    border: 1px solid #384459;
+    border-radius: 5px;
+    color: #9AAABE;
+    padding: 0 20px; /*espacamento da letra, altura, lateral*/
+    font-size: 18px;
+    
+}
+
+.dsmeta-form-control-container {
+
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+
+.dsmeta-container{
+    width: 100%; /*padrao da largura*/
+    max-width: 900px; /*largura maxima*/
+    margin:0 auto; /*para ainhar o div ao centro*/
+}
+
+#sales { /*para chamar uma ID, usa #*/
+
+    padding: 40px 10px; /*espacamento 40 vertical, 10 laterais*/
+}
+
+.dsmeta-sales-table {
+
+    width: 100%; /*distribui a tabela por todo o espaco do container*/
+    border-spacing: 0; /*elimina o espaco entre as linhas da tabela*/
+    border-collapse: collapse; /*para aparecer a linha superior das linhas*/
+
+}
+
+.dsmeta-sales-table thead { /*cabecalho da tabela tera a seguinte formatacao*/
+
+    height: 55px;
+    font-size: 16px;
+    color:#E9E9E9 ;
+    font-weight: 700;
+
+
+}
+
+.dsmeta-sales-table tbody { /*preenchimento das linhas da tabela*/
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #CFCFCF;
+    text-align: center;
+
+}
+
+.dsmeta-sales-table tbody tr {
+
+    height: 74px;
+    border-top: 1px solid #5F6E82; /* cor da linha larga*/
+
+}
+
+.dsmeta-sales-table tbody tr:hover > td {  /*passar o mouse em cima, >td soh de passar em cima, fara efeito*/
+
+
+    background-color: #384459
+
+
+}
+
+.dsmeta-sales-table tbody tr:nth-child(odd) { /*linha filha impar do tr, para contraste de cor*/
+
+
+    background-color: #242C3B;
+}
+
+.dsmeta-red-btn-container { /*classe para centralizar o botao*/
+
+    display: flex;
+    justify-content: center; 
+}
+.dsmeta-red-btn { /*classe para o botao*/
+
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 107, 114, 0.1);
+    border: 1px solid #FF6B72;
+    border-radius: 10px;
+    display: flex; /* alinhamento ao centro*/
+    align-items: center; /* alinhamento ao centro*/
+    justify-content: center; /* alinhamento ao centro*/
+    cursor: pointer; /*passando o mouse vira*/
+
+}
+
+.dsmeta-red-btn img { /*imagem dentro do botao*/
+
+    width: 19px;
+    height: 21.34px;
+}
+
+.show576 {
+
+    display: none; /*para de mostrar a data */
+}
+
+.show992 {
+
+    display: none; /*para de mostrar a ID */
+}
+
+@media (min-width: 576px){ /*mostrara a data a partir de 576px*/
+    .show576 {
+        display: table-cell;
+    }
+
+    .dsmeta-card{
+
+        padding: 35px;
+    }
+
+    .dsmeta-sales-table tbody tr {
+        height: 55px;
+
+    }
+
+    .dsmeta-sales-table tbody {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px){ /*mostrara a ID a partir de 992px*/
+    .show992 {
+        display: table-cell;
+    }
+}
